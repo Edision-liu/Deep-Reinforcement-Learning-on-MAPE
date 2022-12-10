@@ -9,8 +9,8 @@ def get_args():
     parser = argparse.ArgumentParser(description='RL')
 
     # environment
-    parser.add_argument('--env-name', default='simple_spread', help='one from {simple_spread, simple_formation, simple_line, point_to_point})')
-    parser.add_argument('--num-agents', type=int, default=34)
+    parser.add_argument('--env-name', default='simple_formation', help='one from {simple_spread, simple_formation, simple_line, point_to_point})')
+    parser.add_argument('--num-agents', type=int, default=50)
     parser.add_argument('--masking', action='store_true', help='restrict communication to within some threshold')  # default=True,
     parser.add_argument('--mask-dist', type=float, default=1.0, help='distance to restrict comms')
     parser.add_argument('--dropout-masking', action='store_true', help='dropout masking enabled')
