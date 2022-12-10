@@ -1,50 +1,50 @@
-# Learning Transferable Cooperative Behavior in Multi-Agent Teams
+# Swarm intelligence on reinforcement learning for more than 50 agents
 
-[Akshat Agarwal](https://agakshat.github.io)\*, [Sumit Kumar](https://sumitsk.github.io)\*, [Katia Sycara](http://www.cs.cmu.edu/~sycara/)
+## Background
+Swarm intelligence has broad research prospects in military, daily life, and multi-role games. It aims at exploring the complicated relationships among multi-agents to stimulate the co-evolution and the emergence of intelligent decision-making, such as collaberation and confrontation scenarios.
+Based on MAPE (Multi-agent Particle Environment) and Reinforcement learning, we propose a variable-step learning strategy to facilite the convergence speed of reinforcement learning for more than 50 agents, and design a collision regulation for the agents with the inspiration from the repulsive force field. Experiments prove the efficency of our method and well-trained agents demonstrate the impressive collision-avoidance behavior.
 
-Robotics Institute, Carnegie Mellon University
-
-This is the official repository of the 'Learning Transferable Cooperative Behavior in Multi-Agent Teams' paper, available at https://arxiv.org/abs/1906.01202
-
-This work has been presented at the [Learning and Reasoning with Graph-Structured Reprsentations](https://graphreason.github.io/) workshop (https://graphreason.github.io/papers/29.pdf) at ICML, 2019 held in Long Beach, USA. 
 
 ## Installation
-See `requirements.txt` file for the list of dependencies. Create a virtualenv with python 3.5 and setup everything by executing `pip install -r requirements.txt`. 
+See `requirements.txt` file for the list of dependencies. Create a virtualenv with python and setup everything by executing `pip install -r requirements.txt`. 
 
-## Examples
+## Arguments
 See `arguments.py` file for the list of various command line arguments one can set while running scripts. 
 
-### Normal Training
+  `--env-name` for the specific task: simple_spread, simple_formation, simple_line
+
+  `--num-agents` for the specific number of agents to complete the task
+
+  `--render` for whether to visualize the moving process of the agents
+
+  `--test` for the test process
+
+  `--load-dir` for the filedir to load your checkpoint
+
+## Evaluation
+`python eval.py`
+
+Trained checkpoints download from: https://pan.baidu.com/s/13At3DIt67NpLx_b_U82oJQ?pwd=fujl
+
+## Normal Training
 Training on **Coverage Control** (`simple_spread`) environment can be started by running:
 
-`python main.py --env-name simple_spread --num-agents 3 --entity-mp --save-dir 0`
+`python main.py`
+(Specify the flag `--test` if you do not want to save anything.)
 
-Similarly scripts for **Formation Control** (`simple_formation`) and **Line Control** (`simple_line`) can be launched as:
-
-`python main.py --env-name simple_formation --num-agents 3  --save-dir 0`
-
-`python main.py --env-name simple_line --num-agents 3  --save-dir 0`
-
-Specify the flag `--test` if you do not want to save anything. 
-
-### Curriculum Training
+## Curriculum Training
 To start curriculum training, specify the number of agents in `automate.py` file and execute:
 
 `python automate.py --env-name simple_spread --entity-mp --save-dir 0`
 
-## Results
-The models trained via curriculum learning on the three environments can be found in `models` subdirectory.
-
-The corresponding results obtained from the trained policies are located in `videos` subdirectory.
-
-### Transfer 
+## Transfer 
 You can also continue training from a saved model. For example, for training a team of 5 agents in `simple_spread` task from a policy trained with 3 agents, execute:
 
 `python main.py --env-name simple_spread --entity-mp --continue-training --load-dir models/ss/na3_uc.pt --num-agents 5`
 
 
-## Contact
-For any queries, feel free to raise an issue or contact the authors at sumit.sks4@gmail.com or agarwalaks30@gmail.com.
+## Other Instruction
+_This codeblock are improved on 'Learning Transferable Cooperative Behavior in Multi-Agent Teams', the official repository is available at https://arxiv.org/abs/1906.01202_
 
-## License
-This project is licensed under the MIT License.
+## Contact
+### For any queries, feel free to raise an issue or contact the authors at lzhihao@tju.edu.cn
