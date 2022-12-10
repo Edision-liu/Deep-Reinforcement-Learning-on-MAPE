@@ -1,3 +1,7 @@
+<!-- ![img](https://github.com/Edision-liu/Reinformancement-learning-on-MAPE/blob/main/videos/simple_formation.gif) -->
+<!-- ![img](https://github.com/Edision-liu/Reinformancement-learning-on-MAPE/blob/main/videos/point_to_point.gif) -->
+<img src="https://github.com/Edision-liu/Reinformancement-learning-on-MAPE/blob/main/videos/simple_formation.gif" width="450px" height="450px">     <img src="https://github.com/Edision-liu/Reinformancement-learning-on-MAPE/blob/main/videos/point_to_point.gif" width="450px" height="450">
+
 # Swarm intelligence on reinforcement learning for more than 50 agents
 
 ## Background
