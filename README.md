@@ -2,7 +2,7 @@
 <!-- ![img](https://github.com/Edision-liu/Reinformancement-learning-on-MAPE/blob/main/videos/point_to_point.gif) -->
 <img src="https://github.com/Edision-liu/Reinformancement-learning-on-MAPE/blob/main/videos/simple_formation.gif" width="350px" height="350px">     <img src="https://github.com/Edision-liu/Reinformancement-learning-on-MAPE/blob/main/videos/point_to_point.gif" width="350px" height="350">
 
-# Swarm intelligence on reinforcement learning for more than 50 agents
+# Swarm intelligence on reinforcement learning for more than 50 agents without collision
 
 ## Background
 Swarm intelligence has broad research prospects in military, daily life, and multi-role games. It aims at exploring the complicated relationships among multi-agents to stimulate the co-evolution and the emergence of intelligent decision-making, such as collaberation and confrontation scenarios.
